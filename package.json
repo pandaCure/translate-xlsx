@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "s": "node a.js"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +14,11 @@
     "axios": "^1.2.2",
     "bluebird": "^3.7.2",
     "exceljs": "^4.3.0",
+    "franc": "^6.1.0",
     "lodash": "^4.17.21"
   },
   "engines": {
     "node": ">=16.18.0",
     "pnpm": ">=7.23.0"
-  },
+  }
 }

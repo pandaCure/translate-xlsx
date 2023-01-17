@@ -4,12 +4,14 @@ specifiers:
   axios: ^1.2.2
   bluebird: ^3.7.2
   exceljs: ^4.3.0
+  franc: ^6.1.0
   lodash: ^4.17.21
 
 dependencies:
   axios: 1.2.2
   bluebird: 3.7.2
   exceljs: 4.3.0
+  franc: 6.1.0
   lodash: 4.17.21
 
 packages:
@@ -164,6 +166,10 @@ packages:
       traverse: 0.3.9
     dev: false
 
+  /collapse-white-space/2.1.0:
+    resolution: {integrity: sha512-loKTxY1zCOuG4j9f6EPnuyyYkf58RnhhWTvRoZEokgB+WbdXehfjFviyOVYkqzEWz1Q5kRiZdBYS5SwxbQYwzw==}
+    dev: false
+
   /combined-stream/1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
@@ -264,6 +270,12 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
+    dev: false
+
+  /franc/6.1.0:
+    resolution: {integrity: sha512-woYqLX7sFcrKD4y1M33IorhH4b21bCDNr0Rm+zlAGRNuxLFilT4h8qEcclu8RFLpHmvNz7FgAYl9Vqfa8UZwoA==}
+    dependencies:
+      trigram-utils: 2.0.1
     dev: false
 
   /fs-constants/1.0.0:
@@ -440,6 +452,10 @@ packages:
       minimist: 1.2.7
     dev: false
 
+  /n-gram/2.0.2:
+    resolution: {integrity: sha512-S24aGsn+HLBxUGVAUFOwGpKs7LBcG4RudKU//eWzt/mQ97/NMKQxDWHyHx63UNWk/OOdihgmzoETn1tf5nQDzQ==}
+    dev: false
+
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -560,6 +576,13 @@ packages:
 
   /traverse/0.3.9:
     resolution: {integrity: sha512-iawgk0hLP3SxGKDfnDJf8wTz4p2qImnyihM5Hh/sGvQ3K37dPi/w8sRhdNIxYA1TwFwc5mDhIJq+O0RsvXBKdQ==}
+    dev: false
+
+  /trigram-utils/2.0.1:
+    resolution: {integrity: sha512-nfWIXHEaB+HdyslAfMxSqWKDdmqY9I32jS7GnqpdWQnLH89r6A5sdk3fDVYqGAZ0CrT8ovAFSAo6HRiWcWNIGQ==}
+    dependencies:
+      collapse-white-space: 2.1.0
+      n-gram: 2.0.2
     dev: false
 
   /unzipper/0.10.11:

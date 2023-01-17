@@ -4,12 +4,16 @@ const path = require("path");
 const axios = require("axios");
 const _ = require("lodash");
 var bluebird = require("bluebird");
-
+const getLanguage = (text) => {
+  return new Promise((resolve) => {
+    import("franc").then(({ franc }) => resolve(franc(text)));
+  });
+};
 const excel = new Exceljs.Workbook();
 const createExcelInstance = new Exceljs.Workbook();
-const translateText = async (text) => {
+const translateText = async (text, mode) => {
   const returnData = await axios.get(
-    `https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=en&tl=zh-CN&q=${text}`
+    `https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=${mode}&tl=zh-CN&q=${text}`
   );
   return _.get(returnData, "data.0", [])
     ?.map((v) => v[0])
@@ -35,7 +39,12 @@ const main = async () => {
         .map(
           textArr,
           async (v) => {
-            const text = await translateText(v.needTranslateText);
+            const language = await getLanguage(v.needTranslateText)
+            let mode = 'en'
+            if (language === 'jpn') {
+                mode = 'ja'
+            }
+            const text = await translateText(v.needTranslateText, mode);
             createNewSheet.addRow(v.arr.concat(text));
             return text;
           },
