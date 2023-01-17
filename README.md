@@ -11,15 +11,16 @@
   },
 ```
 
-### nvm 安装
+2、nvm 安装
 
 https://github.com/nvm-sh/nvm
 
-### pnpm 安装
-
+3、pnpm 安装
+```sh
 npm i -g pnpm
+```
 
-### install
+4、install
 
 ```sh
 pnpm install
