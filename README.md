@@ -16,8 +16,9 @@
 https://github.com/nvm-sh/nvm
 
 ### pnpm 安装
-
+```sh
 npm i -g pnpm
+```
 
 ### install
 
